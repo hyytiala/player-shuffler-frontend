@@ -93,7 +93,7 @@ class Persons extends React.Component {
                     <TableHead>
                         <TableRow>
                             <TableCell>Nimi</TableCell>
-                            <TableCell></TableCell>
+                            <TableCell>Poista</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>

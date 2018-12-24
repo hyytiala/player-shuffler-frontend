@@ -25,9 +25,6 @@ const styles = theme => ({
 });
 
 class Person extends React.Component{
-    constructor(props) {
-        super(props)
-    }
 
     delete = (event) => {
             event.preventDefault()
