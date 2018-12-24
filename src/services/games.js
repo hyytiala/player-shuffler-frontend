@@ -1,5 +1,5 @@
 import axios from 'axios'
-const baseUrl = 'http://localhost:3001/api/games'
+const baseUrl = 'http://ec2-35-158-88-127.eu-central-1.compute.amazonaws.com:3001/api/games'
 
 
 const getAll = () => {
