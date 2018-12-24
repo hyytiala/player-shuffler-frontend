@@ -13,10 +13,9 @@ const styles = theme => ({
     root: {
         width: '100%',
         marginTop: theme.spacing.unit * 3,
-        overflowX: 'auto',
+        padding: theme.spacing.unit,
     },
-    table: {
-        minWidth: 700,
+    tableHead: {
     },
     textField: {
         marginLeft: theme.spacing.unit,
@@ -31,7 +30,7 @@ const styles = theme => ({
         marginLeft: 'auto',
         marginRight: 'auto',
         marginBottom: theme.spacing.unit,
-        marginTop: theme.spacing.unit,
+        marginTop: 20,
     },
     title: {
         padding: theme.spacing.unit,
@@ -80,17 +79,17 @@ class Game extends React.Component {
                 <Table className={this.props.classes.table}>
                     <TableHead>
                         <TableRow>
-                            <TableCell>Murhaaja</TableCell>
-                            <TableCell>Kohde</TableCell>
+                            <TableCell className={this.props.classes.tableHead}>Murhaaja</TableCell>
+                            <TableCell className={this.props.classes.tableHead}>Kohde</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         {this.state.order.map(player =>
                             <TableRow key={player._id}>
-                                <TableCell component="th" scope="row">
+                                <TableCell className={this.props.classes.tableHead} component="th" scope="row">
                                     {player.player.name}
                                 </TableCell>
-                                <TableCell component="th" scope="row">
+                                <TableCell className={this.props.classes.tableHead} component="th" scope="row">
                                     {player.target.name}
                                 </TableCell>
                             </TableRow>
@@ -99,7 +98,7 @@ class Game extends React.Component {
                 </Table>
                     :
                     <h2 className={this.props.classes.title}>Ei pelejä</h2>}
-                <Button variant="contained" className={this.props.classes.button} onClick={this.newGame}>
+                <Button variant="contained" color="primary" className={this.props.classes.button} onClick={this.newGame}>
                     Luo uusi peli
                 </Button>
             </Paper>

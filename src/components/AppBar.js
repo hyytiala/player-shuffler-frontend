@@ -141,11 +141,11 @@ class PersistentDrawerLeft extends React.Component {
                     </div>
                     <Divider />
                     <List>
-                        <ListItem button component={Link} to="games" key='Peli'>
+                        <ListItem button component={Link} to="games" key='Peli' onClick={this.handleDrawerClose}>
                             <ListItemIcon><PersonIcon /></ListItemIcon>
                             <ListItemText primary='Peli' />
                         </ListItem>
-                        <ListItem button component={Link} to="players" key='Pelaajat'>
+                        <ListItem button component={Link} to="players" key='Pelaajat' onClick={this.handleDrawerClose}>
                             <ListItemIcon><PersonIcon /></ListItemIcon>
                             <ListItemText primary='Pelaajat' />
                         </ListItem>

@@ -19,16 +19,15 @@ const styles = theme => ({
         marginTop: theme.spacing.unit * 3,
         overflowX: 'auto',
     },
-    table: {
-        minWidth: 700,
-    },
     textField: {
-        marginLeft: theme.spacing.unit,
-        marginRight: theme.spacing.unit,
+        marginLeft: 24,
+        marginRight: 10,
+        marginBottom: 24,
         width: 200,
     },
     fab: {
         margin: theme.spacing.unit,
+        marginTop: 16
     },
 });
 
