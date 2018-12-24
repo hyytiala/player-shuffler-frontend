@@ -141,7 +141,7 @@ class PersistentDrawerLeft extends React.Component {
                     </div>
                     <Divider />
                     <List>
-                        <ListItem button component={Link} to="games" key='Peli' onClick={this.handleDrawerClose}>
+                        <ListItem button component={Link} to="" key='Peli' onClick={this.handleDrawerClose}>
                             <ListItemIcon><PersonIcon /></ListItemIcon>
                             <ListItemText primary='Peli' />
                         </ListItem>
@@ -157,7 +157,7 @@ class PersistentDrawerLeft extends React.Component {
                     })}
                 >
                     <div className={classes.drawerHeader} />
-                    <Route exact path="/games" render={() => <Game />} />
+                    <Route exact path="/" render={() => <Game />} />
                     <Route exact path="/players" render={() => <Persons />} />
                 </main>
             </div>
