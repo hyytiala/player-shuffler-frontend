@@ -31,14 +31,26 @@ const styles = theme => ({
         marginLeft: 24,
         marginRight: 10,
         marginBottom: 24,
-        width: 200,
+        [theme.breakpoints.up('xs')]: {
+            width: 300,
+        },
+        [theme.breakpoints.down('xs')]: {
+            width: '60%',
+        },
     },
     fab: {
         margin: theme.spacing.unit,
-        marginTop: 16
+        marginTop: 16,
     },
     head: {
         fontSize: 15
+    },
+    title:{
+        margin: 24
+    },
+    form: {
+        display: 'flex',
+        width: '100%'
     }
 });
 
@@ -99,6 +111,21 @@ class Persons extends React.Component {
         console.log(this.state.persons)
         return (
             <Paper className={classes.root}>
+                <h2 className={classes.title}>Lisää uusi pelaaja</h2>
+                <form className={classes.form} noValidate autoComplete="off" onSubmit={this.handleSubmit}>
+                    <TextField
+                        id="standard-name"
+                        label="Nimi"
+                        className={classes.textField}
+                        margin="normal"
+                        value={this.state.name}
+                        onChange={this.handleInputChangeName}
+                    />
+                    <Fab color="primary" aria-label="Add" className={classes.fab} onClick={this.addPerson}>
+                        <AddIcon />
+                    </Fab>
+                </form>
+                <h2 className={classes.title}>Pelaajat</h2>
                 <Table className={classes.table}>
                     <TableHead>
                         <TableRow>
@@ -116,19 +143,6 @@ class Persons extends React.Component {
                         )}
                     </TableBody>
                 </Table>
-                <form className={classes.container} noValidate autoComplete="off" onSubmit={this.handleSubmit}>
-                    <TextField
-                        id="standard-name"
-                        label="Nimi"
-                        className={classes.textField}
-                        margin="normal"
-                        value={this.state.name}
-                        onChange={this.handleInputChangeName}
-                    />
-                    <Fab color="primary" aria-label="Add" className={classes.fab} onClick={this.addPerson}>
-                        <AddIcon />
-                    </Fab>
-                </form>
             </Paper>
         );
     }

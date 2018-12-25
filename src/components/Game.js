@@ -7,6 +7,7 @@ import TableCell from "@material-ui/core/TableCell/TableCell";
 import TableBody from "@material-ui/core/TableBody/TableBody";
 import Paper from "@material-ui/core/Paper/Paper";
 import Button from '@material-ui/core/Button'
+import NextIcon from '@material-ui/icons/Forward';
 import {withStyles} from "@material-ui/core";
 
 const styles = theme => ({
@@ -44,6 +45,10 @@ const styles = theme => ({
     },
     head: {
         fontSize: 15
+    },
+    arrow: {
+        padding: 0,
+        width: '23%'
     }
 });
 
@@ -89,6 +94,7 @@ class Game extends React.Component {
                     <TableHead>
                         <TableRow>
                             <TableCell className={this.props.classes.head}>Murhaaja</TableCell>
+                            <TableCell className={this.props.classes.arrow}></TableCell>
                             <TableCell className={this.props.classes.head}>Kohde</TableCell>
                         </TableRow>
                     </TableHead>
@@ -97,6 +103,9 @@ class Game extends React.Component {
                             <TableRow key={player._id}>
                                 <TableCell className={this.props.classes.tableHead} component="th" scope="row">
                                     {player.player.name}
+                                </TableCell>
+                                <TableCell className={this.props.classes.arrow} component="th" scope="row">
+                                    <NextIcon/>
                                 </TableCell>
                                 <TableCell className={this.props.classes.tableHead} component="th" scope="row">
                                     {player.target.name}
