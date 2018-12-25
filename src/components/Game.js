@@ -14,8 +14,14 @@ const styles = theme => ({
         width: '100%',
         marginTop: theme.spacing.unit * 3,
         padding: theme.spacing.unit,
-    },
-    tableHead: {
+        maxWidth: 700,
+        [theme.breakpoints.up('xs')]: {
+            marginLeft: 'auto',
+            marginRight: 'auto'
+        },
+        [theme.breakpoints.down('xs')]: {
+            marginLeft: 0,
+        },
     },
     textField: {
         marginLeft: theme.spacing.unit,
@@ -36,6 +42,9 @@ const styles = theme => ({
         padding: theme.spacing.unit,
         textAlign: 'center'
     },
+    head: {
+        fontSize: 15
+    }
 });
 
 class Game extends React.Component {
@@ -79,8 +88,8 @@ class Game extends React.Component {
                 <Table className={this.props.classes.table}>
                     <TableHead>
                         <TableRow>
-                            <TableCell className={this.props.classes.tableHead}>Murhaaja</TableCell>
-                            <TableCell className={this.props.classes.tableHead}>Kohde</TableCell>
+                            <TableCell className={this.props.classes.head}>Murhaaja</TableCell>
+                            <TableCell className={this.props.classes.head}>Kohde</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>

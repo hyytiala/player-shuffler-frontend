@@ -18,6 +18,14 @@ const styles = theme => ({
         width: '100%',
         marginTop: theme.spacing.unit * 3,
         overflowX: 'auto',
+        maxWidth: 700,
+        [theme.breakpoints.up('xs')]: {
+            marginLeft: 'auto',
+            marginRight: 'auto'
+        },
+        [theme.breakpoints.down('xs')]: {
+            marginLeft: 0,
+        },
     },
     textField: {
         marginLeft: 24,
@@ -29,6 +37,9 @@ const styles = theme => ({
         margin: theme.spacing.unit,
         marginTop: 16
     },
+    head: {
+        fontSize: 15
+    }
 });
 
 class Persons extends React.Component {
@@ -91,8 +102,8 @@ class Persons extends React.Component {
                 <Table className={classes.table}>
                     <TableHead>
                         <TableRow>
-                            <TableCell>Nimi</TableCell>
-                            <TableCell>Poista</TableCell>
+                            <TableCell className={classes.head}>Nimi</TableCell>
+                            <TableCell className={classes.head}>Poista</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>

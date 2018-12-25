@@ -17,8 +17,8 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import PersonIcon from '@material-ui/icons/Person';
+import GameIcon from '@material-ui/icons/Gamepad';
 import {
-    NavLink,
     Link,
     Route
 } from 'react-router-dom'
@@ -142,7 +142,7 @@ class PersistentDrawerLeft extends React.Component {
                     <Divider />
                     <List>
                         <ListItem button component={Link} to="" key='Peli' onClick={this.handleDrawerClose}>
-                            <ListItemIcon><PersonIcon /></ListItemIcon>
+                            <ListItemIcon><GameIcon /></ListItemIcon>
                             <ListItemText primary='Peli' />
                         </ListItem>
                         <ListItem button component={Link} to="players" key='Pelaajat' onClick={this.handleDrawerClose}>
