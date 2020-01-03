@@ -1,5 +1,5 @@
 import axios from 'axios'
-const baseUrl = '/api/games'
+const baseUrl = 'https://player-shuffler.herokuapp.com/api/games'
 
 
 const getAll = () => {
