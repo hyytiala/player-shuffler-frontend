@@ -1,5 +1,5 @@
 import axios from 'axios'
-const baseUrl = 'https://hali.hyytiala.fi:3002/api/games'
+const baseUrl = '/api/games'
 
 
 const getAll = () => {
