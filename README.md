@@ -2,4 +2,4 @@
 
 Player Shuffler app for Game called Halimurhaaja
 
-[Demo(in finnish)](https://hali.hyytiala.fi)
+[Demo(in finnish)](https://hali.netlify.com)
