@@ -6,7 +6,7 @@
 
 This application allows the user to generate player pairs in a game called "Halimurhaaja" that is a common game played in scout events.
 
-### Key features:
+## Key features:
 
 * Easy to use user interface
 * Responsive design that work on different devices
@@ -21,19 +21,21 @@ This application allows the user to generate player pairs in a game called "Hali
 
 
 ## Development:
-**Prerequisites:**
+
+### Prerequisites:
 * Node.js >10
 
-### Backend
+### Backend:
 
 [Backend repository](https://github.com/hyytiala/player-shuffler-backend)
 
-### Frontend
+### Frontend:
+
 **Start development**
 1. Install yarn packages `yarn install`
 2. Start development server `yarn start`
 3. Server running at `http://localhost:3000/`
 
-## Learn More
+## Learn More:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started)
